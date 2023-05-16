@@ -19,7 +19,11 @@ export default {
     },
     methods:{
         addTodo(e) {
-            this.$emit('addTodo', e.target.value);
+            //this.$store.commit('ADD_TODO', e.target.value);
+            //action
+            this.$store.dispatch('addTodo',e.target.value)
+            this.todoText = '';
+            // this.$emit('addTodo', e.target.value);
         }
     }
 }
