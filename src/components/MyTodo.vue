@@ -32,7 +32,7 @@ export default {
             // this.$store.commit('TOGGLE_TODO',{
             //     id:this.todo.id,
             //     checked:e.target.checked
-            this.$store.dispatch('toggleTodo',{
+            this.$store.dispatch('todo/toggleTodo',{
                 id:this.todo.id,
                 checked:e.target.checked
             })
@@ -43,7 +43,7 @@ export default {
         },
         clickDelete(){
             // this.$store.commit('DELETE_TODO',this.todo.id)
-            this.$store.dispatch('deleteTodo',this.todo.id)
+            this.$store.dispatch('todo/deleteTodo',this.todo.id)
             // this.$emit('click-delete', this.todo.id)
         }
     }
